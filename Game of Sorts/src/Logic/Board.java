@@ -70,7 +70,6 @@ public class Board extends JPanel implements Runnable{
         }
         }
     public void drawDragons(Graphics g){
-        int arraySize = dragonsArray.size();
         for(Dragon dragon: dragonsArray){
             g.drawImage(dragon.getImage(), dragon.getX(), dragon.getY(), this);
         }

@@ -2,6 +2,7 @@ package Entes;
 
 import java.awt.event.KeyEvent;
 import javax.swing.ImageIcon;
+import java.awt.Rectangle;
 
 /**
  * @author Chacón Campos
@@ -15,6 +16,7 @@ public class Caballero extends Sprite{
     private static Caballero knight;
     private final String caballeroImg = "src/imagenes/Griffin.png";
     private Fire playerShot;
+    private Rectangle spriteRectangle;
     
     public static Caballero getCaballero(int X, int Y){
         if(knight == null){

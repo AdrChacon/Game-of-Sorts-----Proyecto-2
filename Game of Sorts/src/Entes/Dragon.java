@@ -1,6 +1,7 @@
 package Entes;
 
 import javax.swing.ImageIcon;
+import java.awt.Rectangle;
 /**
  *
  * @author Chacón Campos
@@ -18,6 +19,7 @@ public class Dragon extends Sprite{
     protected int attackSpeed;
     protected Fire shotDrake;
     protected final String dragonImg = "src/imagenes/wyvernDrake.png";
+    protected Rectangle spriteRectangle;
     
     public Dragon(int X, int Y, String hierarchy, int wave, int dragonNumber, Dragon parentDragon, int dragonAge,int dragonAS){
         x = X;
