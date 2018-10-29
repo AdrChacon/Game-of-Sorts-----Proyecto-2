@@ -1,3 +1,4 @@
+// Parte de este código se tomó de http://zetcode.com/tutorials/javagamestutorial/
 package Logic;
 import java.awt.EventQueue;
 import javax.swing.JFrame;

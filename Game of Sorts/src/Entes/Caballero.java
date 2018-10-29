@@ -19,6 +19,9 @@ public class Caballero extends Sprite{
     private Rectangle spriteRectangle;
     
     public static Caballero getCaballero(int X, int Y){
+        /*
+            Singleton para la creación del personaje jugador
+        */
         if(knight == null){
         knight = new Caballero(X, Y);
         }

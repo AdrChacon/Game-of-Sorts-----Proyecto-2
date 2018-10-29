@@ -1,4 +1,4 @@
-        
+package Arboles;        
     public class AVLNode {
     public Comparable dato;      	 // el dato del nodo
     public AVLNode izquierdo;            // hijo izquierdo

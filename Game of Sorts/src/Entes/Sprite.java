@@ -1,4 +1,4 @@
-
+// Parte de este código se tomó de http://zetcode.com/tutorials/javagamestutorial/
 package Entes;
 import java.awt.Image;
 /**

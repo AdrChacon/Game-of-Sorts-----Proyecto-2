@@ -1,3 +1,4 @@
+// Parte de este código se tomó de http://zetcode.com/tutorials/javagamestutorial/
 package Logic;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -55,7 +56,7 @@ public class Board extends JPanel implements Runnable{
         super.addNotify();
         gameInit();
     }
-    public void gameInit(){
+    public void gameInit(){ //Aquí se crean instancias de los objetos del juego
         int drakeSpawnX = initDrakeX;
         for(int i = 0; i<enemyWaveCount; i++){
             Infantry drake = new Infantry(i, null, enemyWave, drakeSpawnX, initDrakeY, randomizer.nextInt(1000), randomizer.nextInt(100));
@@ -69,15 +70,15 @@ public class Board extends JPanel implements Runnable{
             animator.start();
         }
         }
-    public void drawDragons(Graphics g){
+    public void drawDragons(Graphics g){ //Función de dibujo de los Dragones
         for(Dragon dragon: dragonsArray){
             g.drawImage(dragon.getImage(), dragon.getX(), dragon.getY(), this);
         }
     }
-    public void drawPlayer(Graphics g){
+    public void drawPlayer(Graphics g){ //Función de dibujo del jugador
         g.drawImage(knight.getImage(),knight.getX(),knight.getY(),this);
     }
-    public void paintComponent(Graphics g){
+    public void paintComponent(Graphics g){ //Dibujado de objetos en la pantalla
         super.paintComponent(g);
         g.setColor(Color.white);
         g.fillRect(0, 0, d.width, d.height);
@@ -89,7 +90,7 @@ public class Board extends JPanel implements Runnable{
         Toolkit.getDefaultToolkit().sync();
         g.dispose();
     }
-    public void animationCycle(){
+    public void animationCycle(){ //Función de manejo del movimiento de los Sprites
         knight.update();
         for(Dragon dragon: dragonsArray){
             dragon.advance();
@@ -99,6 +100,8 @@ public class Board extends JPanel implements Runnable{
         }
     }
     public void run(){
+    /*Función principal del juego, aquí se llaman las funciones de dibujo y 
+      animación de los objetos del juego  2*/
         long beforeTime, timeDiff, sleep;
 
         beforeTime = System.currentTimeMillis();
@@ -125,7 +128,9 @@ public class Board extends JPanel implements Runnable{
         }
     }
     private class TAdapter extends KeyAdapter {
-
+        /*Clase privada para el control de inputs del teclado mientras
+          el juego está en ejecución.
+        */
 
         public void keyReleased(KeyEvent e) {
 
